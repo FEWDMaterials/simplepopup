@@ -43,9 +43,36 @@ const removeClass = ($target, className) => {
     return true;
 }
 
-const isOpen = false;
+let isOpen = false;
 const $opener = document.querySelector('.js-popup-opener');
 const $popup = document.querySelector('.js-popup');
 const $close = document.querySelector('.js-popup-close');
 const $ack = document.querySelector('.js-popup-ack');
+
+const openPopup = (e) => {
+    removeClass($popup, 'hidden');
+    isOpen = true;
+}
+
+const closePopup = (e) => {
+    addClass($popup, 'hidden');
+    isOpen = false;
+}
+
+$opener.addEventListener('click', openPopup);
+$close.addEventListener('click', closePopup);
+$ack.addEventListener('click', (e) => {
+    closePopup();
+    addClass($opener, 'hidden');
+});
+
+
+
+
+
+
+
+
+
+
 

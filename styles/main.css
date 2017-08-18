@@ -1,3 +1,22 @@
+.s-window {
+    display: flex;
+    box-sizing: border-box;
+    
+    width: 150px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.s-item {
+    height: 50px;
+    width: 150px;
+    box-sizing: border-box;
+    
+    flex: 0 0 100%;
+    margin-left: 0px;
+    transition: margin-left 0.3s;
+}
+
 #my-theme .popup {
     position: fixed;
     top: 0;
